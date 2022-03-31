@@ -14,3 +14,14 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 # 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
+import hashlib
+
+a = input('输入加密的字符：')
+
+b = hashlib.md5()
+
+b.update(a.encode(encoding='utf-8'))
+
+print ('MD5加密前：' + a)
+
+print ('MD5加密后：' + b.hexdigest())
